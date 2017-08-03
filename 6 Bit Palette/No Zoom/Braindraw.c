@@ -29,8 +29,6 @@ void drawbmp(char *filename, Color frame[FRAMEWIDTH][FRAMEHEIGHT]);
  * Email : yasharyang@gmail.com
  */
 
-
-
 int main(void)
 {
   int code[MAXSIZE][2];     // if code[i][0] = [ or ], code[i][1] points
@@ -187,11 +185,11 @@ int main(void)
         {
           if(1 & grid[row][col])
           {
-            frame[row][col].r = 255;
+            frame[row][col].b = 255;
           }
           else
           {
-            frame[row][col].r = 0;
+            frame[row][col].b = 0;
           }
           if((2 & grid[row][col]) >> 1)
           {
@@ -203,11 +201,11 @@ int main(void)
           }
           if((4 & grid[row][col]) >> 2)
           {
-            frame[row][col].b = 255;
+            frame[row][col].r = 255;
           }
           else
           {
-            frame[row][col].b = 0;
+            frame[row][col].r = 0;
           }
         }
         break;
