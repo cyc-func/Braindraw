@@ -4,8 +4,8 @@
 #define  MAXSIZE     60000
 #define  CELLMAXSIZE 256
 
-#define  FRAMEWIDTH  7
-#define  FRAMEHEIGHT 7
+#define  FRAMEWIDTH  32
+#define  FRAMEHEIGHT 32
 
 #define  ERR_SIZEEXCEED        "Program is too large"
 #define  ERR_UNMATCHEDBRACKETS "Please match all the brackets"
