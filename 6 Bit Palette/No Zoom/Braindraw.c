@@ -231,15 +231,6 @@ int main(void)
     }
   }
 
-  for(i = 0; i < FRAMEWIDTH; i++)
-  {
-    for(j = 0; j < FRAMEHEIGHT; j++)
-    {
-      printf("%3d%3d%3d ", frame[i][j].r, frame[i][j].g, frame[i][j].b);
-    }
-    printf("\n");
-  }
-
   drawbmp("img.bmp", frame);
 
   return 0;
@@ -253,6 +244,8 @@ void drawbmp(char *filename, Color frame[FRAMEWIDTH][FRAMEHEIGHT])
 
   unsigned int extraBytes;
   unsigned int paddedImageSize;
+
+  int i, j, x, y;
 
   extraBytes = 4 - ((FRAMEWIDTH * 3) % 4);
   if(extraBytes == 4) extraBytes = 0;
@@ -276,7 +269,7 @@ void drawbmp(char *filename, Color frame[FRAMEWIDTH][FRAMEHEIGHT])
 
   fprintf(fout, "BM");
 
-  for(int i = 0; i <= 5; i++)
+  for(i = 0; i <= 5; i++)
   {
     fprintf(fout, "%c", headers[i] & 0x000000FF);
     fprintf(fout, "%c", (headers[i] & 0x0000FF00) >> 8);
@@ -289,7 +282,7 @@ void drawbmp(char *filename, Color frame[FRAMEWIDTH][FRAMEHEIGHT])
   fprintf(fout, "%c", 24);
   fprintf(fout, "%c", 0);
 
-  for(int i = 7; i <= 12; i++)
+  for(i = 7; i <= 12; i++)
   {
     fprintf(fout, "%c", headers[i] & 0x000000FF);
     fprintf(fout, "%c", (headers[i] & 0x0000FF00) >> 8);
@@ -297,9 +290,9 @@ void drawbmp(char *filename, Color frame[FRAMEWIDTH][FRAMEHEIGHT])
     fprintf(fout, "%c", (headers[i] & (unsigned int) 0xFF000000) >> 24);
   }
 
-  for(int y = FRAMEWIDTH - 1; y >= 0; y--)
+  for(y = FRAMEWIDTH - 1; y >= 0; y--)
   {
-    for(int x = 0; x < FRAMEHEIGHT; x++)
+    for(x = 0; x < FRAMEHEIGHT; x++)
     {
       fprintf(fout, "%c", frame[y][x].b);
       fprintf(fout, "%c", frame[y][x].g);
@@ -308,7 +301,7 @@ void drawbmp(char *filename, Color frame[FRAMEWIDTH][FRAMEHEIGHT])
 
     if(extraBytes)
     {
-      for(int i = 0; i < extraBytes; i++)
+      for(i = 0; i < extraBytes; i++)
       {
         fprintf(fout, "%c", 0);
       }
