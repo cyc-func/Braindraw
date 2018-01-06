@@ -11,7 +11,7 @@ All credits to [Benzene](https://codegolf.stackexchange.com/a/136986/31561) and 
 * `^` Move one pixel down. It wraps if you are on the highest pixel.
 * `+` Increase the pixel's value by 1. Values are stored modulo `CELLMAXSIZE`.
 * `-` Decrease the pixel's value by 1. Values are stored modulo `CELLMAXSIZE`.
-* `.` Draw the cell's value. See below for more information.
+* `.` Draw the cell's value. See above for more information.
 * `,` Take input. Input is taken modulo `CELLMAXSIZE`. Input is taken only after entire code is inputted.
 * `[` If the value at the current cell is zero, then instead of moving the instruction pointer forward to the next command, it is jumped forward to the command after the matching `]` command.
 * `]` If the value at the current cell is non-zero, then instead of moving the instruction pointer forward to the next command, it is jumped backwards to the command after the matching `[` command.
@@ -21,3 +21,6 @@ All credits to [Benzene](https://codegolf.stackexchange.com/a/136986/31561) and 
 After compiling the code, enter the desired BrainDraw code into the terminal. Once this is done, press `CTRL+Z` in Windows or `CTRL+D` in Unix or Linux (If these commands don't work for you, try to figure out the command for inputting `EOF` in terminal for your OS).
 
 The code will then be interpreted and if there are no errors, an image titled `img.bmp` will be created in the same directory.
+
+**Colors**
+* `0` ![hi](https://www.uwlax.edu/images/icons/UWL/favicon-32x32.png)
