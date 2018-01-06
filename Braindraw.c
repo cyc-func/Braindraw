@@ -1,6 +1,13 @@
 /**
  * BrainDraw is a graphical variant of Brainf***. It can be used to manipulate
- * pixels for creating drawings.
+ * pixels for creating drawings. It uses an 8-color, 3-bit palette. If a cell
+ * with value 0-7 is printed, the relevent color corresponding to the cell is
+ * printed. A cell with a value greater that 7 prints white. In binary if the
+ * color is abc_2, then a corresponds to red, b corresponds to green and c
+ * corresponds to blue.
+ *
+ * All credits to Benzene (https://codegolf.stackexchange.com/a/136986/31561)
+ * and juju2143 (https://esolangs.org/wiki/User:Juju2143) for the ideas.
  *
  * The image resolution and other important constants can be found at the
  * beginning of the code and can be modified to suit your requirements.
@@ -12,7 +19,7 @@
  * ^ Move one pixel down. It wraps if you are on the highest pixel.
  * + Increase the pixel's value by 1. Values are stored modulo CELLMAXSIZE.
  * - Decrease the pixel's value by 1. Values are stored modulo CELLMAXSIZE.
- * . Draw the cell's value. See below for more information.
+ * . Draw the cell's value.
  * , Take input. Input is taken modulo CELLMAXSIZE. Input is taken only after
  *   entire code is inputted.
  * [ If the value at the current cell is zero, then instead of moving the
@@ -26,10 +33,6 @@
  * or Linux. If the above commands don't work for you, try to figure out the
  * command for inputting EOF in terminal for your OS.
  * An image titled img.bmp will be created in the same directory.
- * 
- * A 8 color, 3-bit palette is used. A single integer n holds the RGB values.
- * If we write n in base 2, abc_2, a corresponds to R, b corresponds to g,
- * c corresponds to b. Anything n larger than 7 is printed as white.
  *
  * Author: Yasharyan Gaikwad
  * Email : yasharyang@gmail.com
