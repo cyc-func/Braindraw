@@ -25,6 +25,7 @@
  * After entering the desired code, press CTRL+Z in Windows or CTRL+D in Unix
  * or Linux. If the above commands don't work for you, try to figure out the
  * the command for inputting EOF in terminal for your OS.
+ * An image titled img.bmp will be created in the same directory.
  * 
  * A 8 color, 3-bit palette is used. A single integer n holds the RGB values.
  * If we write n in base 2, abc_2, a corresponds to R, b corresponds to g,
