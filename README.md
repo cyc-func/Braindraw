@@ -1,3 +1,5 @@
+**TODO: ADD DEBUGGING OPTIONS**
+
 # Braindraw
 
 BrainDraw is a graphical variant of Brainf***. It can be used to manipulate pixels for creating drawings. It uses an `8-color`, `3-bit` palette. If a cell with value `0-7` is printed, the relevent color corresponding to the cell is printed. A cell with a value greater that `7` prints white. In binary if the color is `abc_2`, then `a` corresponds to red, `b` corresponds to green and `c` corresponds to blue. See below for more details.
