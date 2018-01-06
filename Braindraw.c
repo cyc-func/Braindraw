@@ -19,7 +19,7 @@
  * ^ Move one pixel down. It wraps if you are on the highest pixel.
  * + Increase the pixel's value by 1. Values are stored modulo CELLMAXSIZE.
  * - Decrease the pixel's value by 1. Values are stored modulo CELLMAXSIZE.
- * . Draw the cell's value.
+ * . Draw the cell's value. See above for more information.
  * , Take input. Input is taken modulo CELLMAXSIZE. Input is taken only after
  *   entire code is inputted.
  * [ If the value at the current cell is zero, then instead of moving the
