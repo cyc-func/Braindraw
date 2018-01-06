@@ -1,3 +1,39 @@
+/**
+ * BrainDraw is a graphical variant of Brainf***. It can be used to manipulate
+ * pixels for creating drawings.
+ *
+ * The image resolution and other important constants can be found at the
+ * beginning of the code and can be modified to suit your requirements.
+ *
+ * Commands
+ * > Move one pixel right. It wraps if you are on the rightmost pixel.
+ * < Move one pixel left. It wraps if you are on the leftmost pixel.
+ * v Move one pixel down. It wraps if you are on the lowest pixel.
+ * ^ Move one pixel down. It wraps if you are on the highest pixel.
+ * + Increase the pixel's value by 1. Values are stored modulo CELLMAXSIZE.
+ * - Decrease the pixel's value by 1. Values are stored modulo CELLMAXSIZE.
+ * . Draw the cell's value. See below for more information.
+ * , Take input. Input is taken modulo CELLMAXSIZE. Input is taken only after
+ *   entire code is inputted.
+ * [ If the value at the current cell is zero, then instead of moving the
+ *   instruction pointer forward to the next command, it is jumped forward
+ *   to the command after the matching ] command.
+ * ] If the value at the current cell is non-zero, then instead of moving the
+ *   instruction pointer forward to the next command, it is jumped backwards
+ *   to the command after the matching [ command.
+ *
+ * After entering the desired code, press CTRL+Z in Windows or CTRL+D in Unix
+ * or Linux. If the above commands don't work for you, try to figure out the
+ * the command for inputting EOF in terminal for your OS.
+ * 
+ * A 8 color, 3-bit palette is used. A single integer n holds the RGB values.
+ * If we write n in base 2, abc_2, a corresponds to R, b corresponds to g,
+ * c corresponds to b. Anything n larger than 7 is printed as white.
+ *
+ * Author: Yasharyan Gaikwad
+ * Email : yasharyang@gmail.com
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -20,14 +56,6 @@ typedef struct
 
 void drawbmp(char *filename, Color frame[FRAMEWIDTH][FRAMEHEIGHT]);
 
-/**
- * A 8 color, 3-bit palette is used. A single integer n holds the RGB values.
- * If we write n in base 2, abc_2, a_2 corresponds to R, b_2 corresponds to g,
- * c_2 corresponds to b. Anything n larger than 7 is printed as white.
- *
- * Author: Yasharyan Gaikwad
- * Email : yasharyang@gmail.com
- */
 
 int main(void)
 {
