@@ -23,4 +23,11 @@ After compiling the code, enter the desired BrainDraw code into the terminal. On
 The code will then be interpreted and if there are no errors, an image titled `img.bmp` will be created in the same directory.
 
 **Colors**
-* `0` ![0](https://raw.githubusercontent.com/cyc-func/Braindraw/master/Colors/0.jpg)
+* ![0](https://raw.githubusercontent.com/cyc-func/Braindraw/master/Colors/0.jpg) `0` : `#000000`
+* ![1](https://raw.githubusercontent.com/cyc-func/Braindraw/master/Colors/1.jpg) `1` : `#0000FF`
+* ![2](https://raw.githubusercontent.com/cyc-func/Braindraw/master/Colors/2.jpg) `2` : `#00FF00`
+* ![3](https://raw.githubusercontent.com/cyc-func/Braindraw/master/Colors/3.jpg) `3` : `#00FFFF`
+* ![4](https://raw.githubusercontent.com/cyc-func/Braindraw/master/Colors/4.jpg) `4` : `#FF0000`
+* ![5](https://raw.githubusercontent.com/cyc-func/Braindraw/master/Colors/5.jpg) `5` : `#FF00FF`
+* ![6](https://raw.githubusercontent.com/cyc-func/Braindraw/master/Colors/6.jpg) `6` : `#FFFF00`
+* ![7](https://raw.githubusercontent.com/cyc-func/Braindraw/master/Colors/7.jpg) `7 - 255` : `#FFFFFF`
