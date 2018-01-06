@@ -1,6 +1,6 @@
 # Braindraw
 
-BrainDraw is a graphical variant of Brainf***. It can be used to manipulate pixels for creating drawings. It uses an 8-color, 3-bit palette. If a cell with value 0-7 is printed, the relevent color corresponding to the cell is printed. A cell with a value greater that 7 prints white. In binary if the color is `abc_2`, then `a` corresponds to red, `b` corresponds to green and `c` corresponds to blue.
+BrainDraw is a graphical variant of Brainf***. It can be used to manipulate pixels for creating drawings. It uses an `8-color`, `3-bit` palette. If a cell with value `0-7` is printed, the relevent color corresponding to the cell is printed. A cell with a value greater that `7` prints white. In binary if the color is `abc_2`, then `a` corresponds to red, `b` corresponds to green and `c` corresponds to blue. See below for more details.
 
 All credits to [Benzene](https://codegolf.stackexchange.com/a/136986/31561) and [juju2143](https://esolangs.org/wiki/User:Juju2143) for the ideas.
 
@@ -23,4 +23,4 @@ After compiling the code, enter the desired BrainDraw code into the terminal. On
 The code will then be interpreted and if there are no errors, an image titled `img.bmp` will be created in the same directory.
 
 **Colors**
-* `0` ![hi](https://www.uwlax.edu/images/icons/UWL/favicon-32x32.png)
+* `0` ![hi](http://www.officialkaleo.com/sites/g/files/g2000005531/themes/mythemes/acq_reskin_50790/images/favicon_7.ico)
