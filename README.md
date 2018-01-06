@@ -23,4 +23,4 @@ After compiling the code, enter the desired BrainDraw code into the terminal. On
 The code will then be interpreted and if there are no errors, an image titled `img.bmp` will be created in the same directory.
 
 **Colors**
-* `0` ![hi](http://www.officialkaleo.com/sites/g/files/g2000005531/themes/mythemes/acq_reskin_50790/images/favicon_7.ico)
+* `0` ![0](https://raw.githubusercontent.com/cyc-func/Braindraw/master/Colors/0.jpg)
