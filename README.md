@@ -6,7 +6,7 @@ BrainDraw is a graphical variant of Brainf***. It can be used to manipulate pixe
 
 All credits to [Benzene](https://codegolf.stackexchange.com/a/136986/31561) and [juju2143](https://esolangs.org/wiki/User:Juju2143) for the ideas.
 
-**<span style="color:red">WARNING</span>:** it is not safe to type comments in the source because the character `v` has a special meaning.
+**WARNING:** it is not safe to type comments in the source because the character `v` has a special meaning.
 
 **Commands**
 * `>` Move one pixel right. It wraps if you are on the rightmost pixel.
