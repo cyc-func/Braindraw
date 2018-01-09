@@ -1,5 +1,3 @@
-**TODO: ADD DEBUGGING OPTIONS**
-
 # Braindraw
 
 BrainDraw is a graphical variant of Brainf***. It can be used to manipulate pixels for creating drawings. It uses an `8-color`, `3-bit` palette. If a cell with value `0-7` is printed, the relevent color corresponding to the cell is printed. A cell with a value greater that `7` prints white. In binary if the color is `abc_2`, then `a` corresponds to red, `b` corresponds to green and `c` corresponds to blue. See below for more details.
@@ -24,7 +22,7 @@ All credits to [Benzene](https://codegolf.stackexchange.com/a/136986/31561) and 
 
 After compiling the code, enter the desired BrainDraw code into the terminal. Once this is done, press `CTRL+Z` in Windows or `CTRL+D` in Unix or Linux (If these commands don't work for you, try to figure out the command for inputting `EOF` in terminal for your OS).
 
-The code will then be interpreted and if there are no errors, an image titled `img.bmp` will be created in the same directory.
+The code will then be interpreted and if there are no errors, an image titled `img.bmp` will be created in the same directory. If you want to debug, you may pass in `-d` or `--debug` as an argument.
 
 **Colors**
 * ![0](https://raw.githubusercontent.com/cyc-func/Braindraw/master/Colors/0.jpg) `0` : `#000000`
