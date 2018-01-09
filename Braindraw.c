@@ -39,9 +39,10 @@
  */
 
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 
-#define  MAXSIZE     60000
+#define  MAXSIZE     65535
 #define  CELLMAXSIZE 256
 
 #define  FRAMEWIDTH  32
@@ -49,6 +50,9 @@
 
 #define  ERR_SIZEEXCEED        "Program is too large"
 #define  ERR_UNMATCHEDBRACKETS "Please match all the brackets"
+
+#define  DEBUG_FLAG_1 "-d"
+#define  DEBUG_FLAG_2 "--debug"
 
 
 typedef struct
@@ -61,12 +65,22 @@ typedef struct
 void drawbmp(char *filename, Color frame[FRAMEWIDTH][FRAMEHEIGHT]);
 
 
-int main(void)
+int main(int argc, char *argv[])
 {
   int code[MAXSIZE][2];     // if code[i][0] = [ or ], code[i][1] points
                             // to the corresponding bracket
   int codeLength = 0;
   int i, j;
+
+  int debug = 0;
+  for(i = 0; i < argc; i++)
+  {
+    if((strcmp(argv[i], DEBUG_FLAG_1) == 0)|| (strcmp(argv[i], DEBUG_FLAG_2) == 0))
+    {
+      debug = 1;
+    }
+  }
+
 
   while((i = getchar()) != EOF)
   {
@@ -259,6 +273,20 @@ int main(void)
         }
         break;
     }
+  }
+
+  if(debug)
+  {
+    for(i = 0; i < FRAMEWIDTH; i++)
+    {
+      for(j = 0; j < FRAMEHEIGHT; j++)
+      {
+        printf("%4d ", grid[i][j]);
+      }
+      printf("\n");
+    }
+
+    printf("\nPointer is at (%d, %d)\n", row, col);
   }
 
   drawbmp("img.bmp", frame);
